@@ -28,8 +28,6 @@ pipeline {
         
           stage('Docker build image') {
               steps {
-                  
-                 
                   sh 'sudo docker build -t rambikasharma/bank-finance:1.0 .'
               
                 }
