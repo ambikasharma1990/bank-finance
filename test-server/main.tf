@@ -6,7 +6,7 @@ resource "aws_instance" "test-server" {
   ami           = "ami-00c39f71452c08778" 
   instance_type = "t2.micro" 
   key_name = "project2"
-  vpc_security_group_ids= ["sg-0d164277c163559c2"]
+  vpc_security_group_ids= ["sg-092daaa7fa5ff09e4"]
   connection {
     type     = "ssh"
     user     = "ec2-user"
@@ -29,8 +29,3 @@ resource "aws_instance" "test-server" {
   } 
 }
 
-output "test-server_public_ip" {
-
-  value = aws_eip_association.eip_assoc.public_ip
-  
-}
